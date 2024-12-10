@@ -4,10 +4,23 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Information form</title>
+    <!-- http://localhost/88823665-camp-66/mystyle.css-->
+    <!-- http://localhost/mystyle.css/ -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+Thai:wght@100..900&display=swap" rel="stylesheet">
+    <style>
+        /* internal css */
+        h1 {
+            color: brown;
+        }
+    </style>
+    <link rel="stylesheet" href="mystyle.css">
 </head>
 <body>
     <form action="/submit_form" method="post" enctype="multipart/form-data">
-        <h1>Workshop #HTML - FORM</h1>
+        <h1 class = "myh1" >Workshop #HTML - FORM</h1>
+        
         <label for="name">ชื่อ</label>
         <input type="text" id="name" name="name" required>
         <br><br>

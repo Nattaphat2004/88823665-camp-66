@@ -1,0 +1,28 @@
+/* internal css */
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif+Thai:wght@100..900&display=swap');
+body {
+    font-family: 'Noto Serif Thai',serif;
+}
+
+/*ul*/
+ul{
+    list-style: disc;
+    list-style: circle inside url('');
+}
+input:focus{
+    outline: none;
+    border-color: brown;
+}
+h1 {
+    color: chartreuse;
+}
+h1.myh1{
+    font-size: 25pt;
+    margin: 25px;
+    padding: 10px 50px 20px 50px;
+    border: 5px solid red;
+    border-radius: 50%;
+}
+h1:hover{
+    background-color: bisque;
+}
