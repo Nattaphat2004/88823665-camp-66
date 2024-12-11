@@ -2,8 +2,26 @@
 @import url('https://fonts.googleapis.com/css2?family=Noto+Serif+Thai:wght@100..900&display=swap');
 body {
     font-family: 'Noto Serif Thai',serif;
+    display: flex;
+    justify-content: center; /* จัดให้อยู่กึ่งกลางแนวนอน */
+    align-items: center; /* จัดให้อยู่กึ่งกลางแนวตั้ง */
+    margin: 10; /* ลบระยะขอบ */
+    background-color: rgb(205, 205, 203);
 }
 
+form {
+    border: 3px solid rgb(55, 0, 236); /* สีและความหนาของกรอบ */
+    border-radius: 10px; /* มุมโค้งของกรอบ */
+    padding: 20px; /* ระยะห่างภายในกรอบ */
+    background-color: white; /* สีพื้นหลังของกรอบ */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* เงา */
+    width: 400px; /* กำหนดความกว้างของกรอบ */
+}
+
+input:hover {
+    background-color: rgb(184, 232, 237);
+
+}
 /*ul*/
 ul{
     list-style: disc;
@@ -11,18 +29,19 @@ ul{
 }
 input:focus{
     outline: none;
-    border-color: brown;
+    border-color: cornflowerblue; 
 }
 h1 {
-    color: chartreuse;
+    color: aqua;
 }
 h1.myh1{
-    font-size: 25pt;
+    -webkit-text-stroke: 0.5px black;
+    font-size: 20pt;
     margin: 25px;
-    padding: 10px 50px 20px 50px;
-    border: 5px solid red;
-    border-radius: 50%;
+    border-radius: 100%;
 }
 h1:hover{
-    background-color: bisque;
+    background-color: rgb(223, 243, 210);
 }
+
+
