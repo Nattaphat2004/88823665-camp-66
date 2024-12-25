@@ -4,12 +4,12 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ตรวจสอบเลขคู่หรือเลขคี่</title>
+    <title>ข้อ 4</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <style>
         body {
-            background-color: #f8f9fa;
-            font-family: Arial, sans-serif;
+            background-color: #66785F;
+            font-family: "Noto Serif Thai", serif;
         }
 
         .container {
@@ -23,7 +23,7 @@
 
         h1 {
             text-align: center;
-            color: #007bff;
+            color: #118B50;
             margin-bottom: 20px;
         }
 
@@ -46,13 +46,13 @@
         <form method="POST" action="">
             <div class="mb-3">
                 <label for="startNumber" class="form-label">กรอกค่าเริ่มต้น (Start)</label>
-                <input type="number" name="start" id="startNumber" class="form-control" placeholder="ตัวเลขเริ่มต้น เช่น 1" required>
+                <input type="number" name="start" id="startNumber" class="form-control" placeholder="ตัวเลขเริ่มต้น" required>
             </div>
             <div class="mb-3">
                 <label for="endNumber" class="form-label">กรอกค่าสิ้นสุด (End)</label>
-                <input type="number" name="end" id="endNumber" class="form-control" placeholder="ตัวเลขสิ้นสุด เช่น 10" required>
+                <input type="number" name="end" id="endNumber" class="form-control" placeholder="ตัวเลขสิ้นสุด" required>
             </div>
-            <button type="submit" class="btn btn-primary w-100">ตรวจสอบ</button>
+            <button type="submit" class="btn btn-success w-100">ตรวจสอบ</button>
         </form>
 
         <?php
