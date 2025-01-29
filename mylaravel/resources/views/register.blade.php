@@ -1,0 +1,75 @@
+@extends('layouts.default')
+@section('content')
+<div class="register-box">
+    <!-- /.register-logo -->
+    <div class="card card-outline card-primary">
+      <div class="card-header">
+        <a
+          href="../index2.html"
+          class="text-center link-dark link-offset-2 link-opacity-100 link-opacity-50-hover"
+        >
+          <h1 class="mb-0"><b>Admin</b>LTE</h1>
+        </a>
+      </div>
+      <div class="card-body register-card-body">
+        <p class="register-box-msg">Register a new membership</p>
+        <form action="../index3.html" method="post">
+          <div class="mb-1 input-group">
+            <div class="form-floating">
+              <input id="registerFullName" type="text" class="form-control" placeholder="" />
+              <label for="registerFullName">Full Name</label>
+            </div>
+            <div class="input-group-text"><span class="bi bi-person"></span></div>
+          </div>
+          <div class="mb-1 input-group">
+            <div class="form-floating">
+              <input id="registerEmail" type="email" class="form-control" placeholder="" />
+              <label for="registerEmail">Email</label>
+            </div>
+            <div class="input-group-text"><span class="bi bi-envelope"></span></div>
+          </div>
+          <div class="mb-1 input-group">
+            <div class="form-floating">
+              <input id="registerPassword" type="password" class="form-control" placeholder="" />
+              <label for="registerPassword">Password</label>
+            </div>
+            <div class="input-group-text"><span class="bi bi-lock-fill"></span></div>
+          </div>
+          <!--begin::Row-->
+          <div class="row">
+            <div class="col-8 d-inline-flex align-items-center">
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault" />
+                <label class="form-check-label" for="flexCheckDefault">
+                  I agree to the <a href="#">terms</a>
+                </label>
+              </div>
+            </div>
+            <!-- /.col -->
+            <div class="col-4">
+              <div class="gap-2 d-grid">
+                <button type="submit" class="btn btn-primary">Sign In</button>
+              </div>
+            </div>
+            <!-- /.col -->
+          </div>
+          <!--end::Row-->
+        </form>
+        <div class="gap-2 mb-3 text-center social-auth-links d-grid">
+          <p>- OR -</p>
+          <a href="#" class="btn btn-primary">
+            <i class="bi bi-facebook me-2"></i> Sign in using Facebook
+          </a>
+          <a href="#" class="btn btn-danger">
+            <i class="bi bi-google me-2"></i> Sign in using Google+
+          </a>
+        </div>
+        <!-- /.social-auth-links -->
+        <p class="mb-0">
+          <a href="login.html" class="text-center link-primary"> I already have a membership </a>
+        </p>
+      </div>
+      <!-- /.register-card-body -->
+    </div>
+  </div>
+  <!-- /.register-box -->

@@ -32,3 +32,7 @@ Route::get('/multiplication',
 Route::post('/multiplication',
     [MyController::class, 'myfunction'])->name('multiplication');
 
+
+
+
+
