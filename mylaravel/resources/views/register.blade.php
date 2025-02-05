@@ -13,24 +13,25 @@
       </div>
       <div class="card-body register-card-body">
         <p class="register-box-msg">Register a new membership</p>
-        <form action="../index3.html" method="post">
+        <form action="{{ url('/register')}}" method="post">
+            @csrf
           <div class="mb-1 input-group">
             <div class="form-floating">
-              <input id="registerFullName" type="text" class="form-control" placeholder="" />
+              <input id="registerFullName" name="name" type="text" class="form-control" placeholder="" />
               <label for="registerFullName">Full Name</label>
             </div>
             <div class="input-group-text"><span class="bi bi-person"></span></div>
           </div>
           <div class="mb-1 input-group">
             <div class="form-floating">
-              <input id="registerEmail" type="email" class="form-control" placeholder="" />
+              <input id="registerEmail" name="email" type="email" class="form-control" placeholder="" />
               <label for="registerEmail">Email</label>
             </div>
             <div class="input-group-text"><span class="bi bi-envelope"></span></div>
           </div>
           <div class="mb-1 input-group">
             <div class="form-floating">
-              <input id="registerPassword" type="password" class="form-control" placeholder="" />
+              <input id="registerPassword" name="password" type="password" class="form-control" placeholder="" />
               <label for="registerPassword">Password</label>
             </div>
             <div class="input-group-text"><span class="bi bi-lock-fill"></span></div>
