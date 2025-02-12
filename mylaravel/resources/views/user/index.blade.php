@@ -16,26 +16,24 @@
               </tr>
             </thead>
             <tbody>
-
-             <?php foreach ($users as $index => $user) { ?>
+              @foreach ($users as $index => $user)
               <tr class="align-middle">
                 <td>{{ $index+1 }}.</td>
                 <td>{{ $user->name }}</td>
                 <td>{{ $user->email }}</td>
                 <td>
-
                   <a href="{{ url('/user/'.$user->id)}}">
                     <button class="btn btn-warning">Edit</button>
                   </a>
-                  <form action="{{ url('/user') }}" method="post" style="display: inline;">
+                  <form action="{{ url('/user') }}" method="post" class="delete-form" style="display: inline;">
                     @csrf
                     @method('delete')
                     <input type="hidden" name="id" value="{{ $user->id }}">
-                    <button class="btn btn-danger">Delete</button>
+                    <button type="button" class="btn btn-danger delete-btn" data-id="{{ $user->id }}">Delete</button>
                   </form>
                 </td>
               </tr>
-              <?php } ?>
+              @endforeach
             </tbody>
           </table>
         </div>
@@ -50,7 +48,34 @@
           </ul>
         </div>
       </div>
-      <!-- /.card -->
     </div>
 </div>
+@endsection
+
+@section('scripts')
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+    document.querySelectorAll(".delete-btn").forEach(button => {
+        button.addEventListener("click", function () {
+            const form = this.closest("form"); // ดึง form ที่ใกล้ที่สุด
+            const userId = this.getAttribute("data-id");
+
+            Swal.fire({
+                title: "Are you sure?",
+                text: "You won't be able to revert this!",
+                icon: "warning",
+                showCancelButton: true,
+                confirmButtonColor: "#3085d6",
+                cancelButtonColor: "#d33",
+                confirmButtonText: "Yes, delete it!"
+            }).then((result) => {
+                if (result.isConfirmed) {
+                    form.submit(); // ส่งฟอร์มลบข้อมูล
+                }
+            });
+        });
+    });
+});
+</script>
 @endsection
