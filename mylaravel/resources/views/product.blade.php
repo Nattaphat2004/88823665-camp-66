@@ -1,4 +1,10 @@
-@extends('layouts.default')
+<html>
+    <head>
+        <title>Product List</title>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+        <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    </head>
+@extends('layouts.default_with_menu')
 @section('content')
 <form action="{{ url ('/product') }}" method="post">
     @csrf
@@ -42,6 +48,7 @@
             </tr>
         </tbody>
     </table>
+@endsection
 
 @section('scripts')
     <script>
@@ -50,7 +57,7 @@
                 $('#product-list').append
                 ('<div class="col-6"><label>Product Name <button type="button" class="mt-2 mb-2 ml-3 btn btn-danger btn-del-product-list">ลบ</button></label><input name="product_name[]" type="text" class="form-control"></div>');
             });
-            
+
             $(document).on('click', '.btn-del-product-list', function () {
                 $(this).parent().parent().remove();
             });
@@ -59,3 +66,4 @@
     </script>
 
 @endsection
+</html>

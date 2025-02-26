@@ -49,7 +49,7 @@ Route::middleware([CheckLogin::class])->group(function() {
     Route::put('/user',[UserController::class, 'edit_action']);
     Route::delete('/user',[UserController::class, 'delete']);
     Route::get('/product',[ProductController::class, 'index']);
-    Route::post('/product',[ProductController::class, 'index']);
+    Route::post('/product',[ProductController::class, 'addProduct']);
 });
 
 

@@ -15,12 +15,12 @@ class ProductController extends Controller
     }
     function addProduct(Request $req){
         $category = new Category();
-        $category->category_name = $req->category_name;
+        $category->name = $req->category_name;
         $category->save();
 
         foreach($req->product_name as $value){
             $product = new ProductList();
-            $product->product_name = $value;
+            $product->name = $value;
             $product->category_id = $category->id;
             $product->user_id = session('user')->id;
             $product->save();
